@@ -105,9 +105,9 @@ public class ConsumerIT {
     private String runSample(String propJson, String prop) throws Exception {
         String fileName;
         if (StringUtils.isNotBlank(prop)) {
-            fileName = "/tmp/jmh_result_prop[" + prop + "].json";
+            fileName = "/tmp/jmh_result_prop[" + prop + "]_" + UUID.randomUUID() + ".json";
         } else {
-            fileName = "/tmp/jmh_result.json";
+            fileName = "/tmp/jmh_result_" + UUID.randomUUID() + ".json";
         }
 
         Options options = new OptionsBuilder()
